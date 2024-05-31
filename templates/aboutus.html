@@ -1,0 +1,65 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+        <main class="page">
+            <div class="page__wrapper">
+                <div class="staff">
+                    <div class="staff__container container">
+                        <div class="staff__title title">Сотрудники</div>
+                        <div class="staff__content">
+                            <div class="staff_coaches staff__block">
+                                <a href="/about/coaches" class="staff-block__container">
+                                    <div class="staff-block__title-text">Тренеры</div>
+                                    <ul class="staff-block__main-text">
+                                        <li class="staff-main-text"><a href="#">Ольга Козлова</a></li>
+                                    </ul>
+                                </a>
+                            </div>
+                            <div class="staff__volunteers staff__block">
+                                <a href="/about/volunteer" class="staff-block__container">
+                                    <div class="staff-block__title-text">Волонтёры</div>
+                                </a>
+                            </div>
+                            <div class="staff__other staff__block">
+                                <a href="/about/otherstaff" class="staff-block__container">
+                                    <div class="staff-block__title-text">Другие сотрудники</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__info">
+                    <div class="about__container container">
+                        <div class="about__work work-time">Прокат работает каждый день (кроме понедельника) с 10.00 до 20.00.</div>
+                        <div class="about__phone phone-number">+7 (915) 355-86-26</div>
+                        <div class="about__contacts contacts">
+                            <a href="https://vk.com/kp_hlebbnikovo" target="_blank" class="vkontakte"><img src="{{ url_for('static', filename='pictures/vk.svg') }}" alt=""><span>Вконтакте</span></a>
+                            <a href="https://t.me/kp_hlebnikovo" target="_blank" class="telegram"><img src="{{ url_for('static', filename='pictures/telegram.svg') }}" alt=""><span>Телеграм</span></a>
+                            <a href="https://api.whatsapp.com/send?phone=79153558626" target="_blank" class="whatsapp"><img src="{{ url_for('static', filename='pictures/whatsapp.svg') }}" alt=""><span>WhatsApp</span></a>
+                        </div>
+                        <div class="about__address address">Мы находимся в г. Долгопрудный, рядом со станцией «Хлебниково», по адресу: ул. Железнодорожная, д. 4/1.</div>
+                    </div>
+                    <div class="about__map">
+                        <div class="about-map__container container">
+                            <script type="text/javascript" charset="utf-8"
+                            async
+                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A098569b3cb483317c50334bea134bc439151a187b76d7b412b1e7d1de8ed630d&amp;
+                            width=100%25&amp;height=607&amp;lang=ru_RU&amp;scroll=true"></script>
+                        </div>
+                    </div>
+                    <div class="about__road">
+                        <div class="about-road__container container">
+                            <div class="road__title">На машине:</div>
+                            <div class="road__sub-title">7 км от МКАД, примерно 15 мин, но учитывайте возможные «пробки»:</div>
+                            <ul>
+                                <li class="road__dmitrov">1. <span class="road__bold">по Дмитровскому ш.:</span> съехать направо после моста через Клязьминское водохранилище под указатель «ХЛЕБНИКОВО», повернуть под мост, далее прямо на эстакаду, на эстакаде сворачиваете направо вниз, далее вперед по асфальтовой дороге прямо, до ул. Гастелло, перед стеллой в честь Гастелло (по левой стороне дороги) повернуть налево, проехать до железнодорожной насыпи, и справа на углу будет конюшня.</li>
+                                <li class="road__leningrad">2. <span class="road__bold">по Ленинградскому ш.:</span> повернуть на аэропорт «Шереметьево», далее мимо аэропорта по Шереметьевскому шоссе, до светофора, на светофоре повернуть направо и сразу налево, дальше по асфальтовой дороге, мимо заправки LukOil (слева), переехать через один одноколейный железнодорожный переезд (справа — нефтеналивная станция) и второй одноколейный железнодорожный переезд (справа — склады LOGISTIC), перед эстакадой на светофоре уйти направо, дальше по асфальтовой дороге прямо до перекрестка, на нем направо, перед стеллой в честь Гастелло (по левой стороне дороги) повернуть налево, проехать до железнодорожной насыпи, справа на углу будет прокат.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+{% endblock %}

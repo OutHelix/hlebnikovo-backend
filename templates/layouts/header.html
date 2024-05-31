@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link type = "text/css" rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__container container">
+                <div class="logo">
+                    <div class="logo__image">
+                        <img
+                            src="../../static/pictures/logo_color.svg"
+                            alt="Вернуться на главную страницу" />
+                    </div>
+                    <div class="logo__name">Хлебниково</div>
+                </div>
+                <div class="header__menu menu">
+                    <div class="menu__icon icon-menu">
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                         <ul class = "menu-list">
+                             <li><a href="/home" title = "Переход на главную страницу" class="menu__link">Главная</a></li>
+                            <li><nav class = "menu__link menu-link__tap">
+                                Наша конюшня
+                                <img class="link-tap__cross" src="../../static/pictures/cross.svg" alt="Открытие меню">
+                            </nav>
+                                <ul class="menu-list__sub-menu">
+                                    <li>
+                                        <a href="/carehorse" title="Переход на страницу об уходе за лошадьми" class="menu-list__link menu-list__link_1">Уход за лошадьми </a>
+                                    </li>
+                                    <li>
+                                        <a href="/horses" title="Переход на страницу с список лощадей" class="menu-list__link menu-list__link_2">Лошади</a>
+                                     </li>
+                                    <li>
+                                         <a href="/news" title="Переход на страницу с новостями" class="menu-list__link menu-list__link_3">Новости</a>
+                                    </li>
+                                    <li>
+                                         <a href="/photogallery" title="Переход на страницу с фотогалереей" class="menu-list__link menu-list__link_4">Фотогалерея</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="/price" title="Переход на страницу с ценами" class="menu__link">Цены</a></li>
+                            <li><a href="/about" title="Переход на страницу с информацией о компании" class="menu__link">О нас</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>

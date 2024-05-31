@@ -1,0 +1,17 @@
+{% include 'layouts/header.html' %}
+         <main class="page">
+            <div class="horse-block main-block">
+                <div class="horse-block__container container">
+                    <div class="horse-block__content block-content">
+                        <div class="horse-block__image horse-photo"><img src ="{{horseinfo[4]}}" > </div>
+                        <div class="horse-block__text">
+                            <div class="horse-text__title title">{{horseinfo[0]}}</div>
+                            <div class="horse-text__1 horse-text">{{horseinfo[1]}}</div>
+                            <div class="horse-text__2 horse-text">{{horseinfo[2]}}</div>
+                            <div class="horse-text__2 horse-text">{{horseinfo[3]|safe}}</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+{% include 'layouts/footer.html' %}

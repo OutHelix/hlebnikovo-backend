@@ -1,0 +1,94 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Конный прокат Хлебниково{% endblock %}
+
+{% block content %}
+        <main class = "page">
+            <div class="hero-block">
+                <div class="hero-block__content">
+                    <div class="hero-block-item__container container ">
+                        <div class="title">
+                            <div class="title__item title">Конный клуб Хлебниково</div>
+                            <div class="title__main">Прогулки на лошадях в живописном уголке Подмосковья. </br>Наши конные прогулки — это отличное времяпровождение с друзьями и семьёй.</div>
+                        </div>
+                    </div>
+                    <a class = "hero-block__btn btn" title="Переход на страницу с информацией о компании" href="/about"><span>Подробнее</span></a>
+                </div>
+                <div class="hero-block-item__bg _ibg">
+                    <img src="../static/pictures/mainblock.jpg" alt="Женя">
+                </div>
+            </div>
+                <div class="advertisement">
+                    <a href="https://korma-anilyn.ru/" title="Сайт компании Анилин" target="_blank" class="advertisement__container">
+                        <div class="ad__img"><img src="../static/pictures/ad_logo.png" alt="Лого рекламы"></div>
+                        <div class="ad__text">Премиальные корма, мюсли и подкормки для лошадей</div>
+                        <div class="ad__arrow"><img src="../static/pictures/ad-arrow_link.svg" alt="Переход на рекламу"></div>
+                    </a>
+            </div>
+            <div class="main-horse-block">
+                <div class="main-horse__container container">
+                    <div class="main-horse__title title">
+                        Наши лошади
+                    </div>
+                    <div class="main-horse__content block-content">
+                        <div class="main-horses__blocks block__horses">
+                            <a href="/horses/Мальчик" title="Переход на страницу с информацией о Мальчике" class="block-horses-1__1 block">
+                                <div class="block-horses-1-1__img horse-photo"><img src="../static/pictures/лошади/malchik.jpg" alt="Мальчик"></div>
+                                <div class="block-horses-1-1__title horse-title">Мальчик (Арабская чистокровная)</div>
+                            </a>
+                            <a href="/horses/Пепел" title="Переход на страницу с информацией о Пепле" class="block-horses-1__2 block">
+                                <div class="block-horses-1-2__img horse-photo"><img src="../static/pictures/лошади/pepel.jpg" alt="Пепел"></div>
+                                <div class="block-horses-1-2__title horse-title">Пепел (Липицианская)</div>
+                            </a>
+                        </div>
+                        <div class="main-horse__text">
+                            <div class="main-horse__more-info">
+                               Больше лошадей вы можете посмотреть нажав на кнопку снизу
+                            </div>
+                            <a class="main-horse__btn btn" title="Переход на страницу с список лощадей" href="/horses">Показать ещё</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="care-block">
+                <div class="care-block__container container">
+                    <div class="care-block__title title">
+                        Мы ухаживаем за нашими лошадьми
+                    </div>
+                    <div class="care-block__content block-content">
+                        <div class="care-block__image horse-photo"><img src="../../static/pictures/first-block.png" alt="Уход за лошадьми"></div>
+                        <div class="care-block__text block-text">
+                            <ul>
+                                <li class = "care-block__li li_1">Всех лошадей кормят отборными кормами.</li>
+                                <li class = "care-block__li li_2">Все лошади обслуживаются квалифицированными кузнецами, которые обрезают копыта и удаляют любые острые края, чтобы предотвратить различные проблемы со здоровьем. </li>
+                                <li class = "care-block__li li_3">Все лошади получают регулярную тренировку, которая помогает им оставаться здоровыми и поддерживать хорошую форму.</li>
+                                <li class = "care-block__li li_4">Каждая лошадь имеет индивидуальные потребности и может требовать специального ухода в зависимости от их состояния здоровья и возраста.</li>
+                            </ul>
+                            <div class="care-block__alert care-block__li">!!Внимание!! Никогда не давайте лошадям мясные продукты,
+                                свежий хлеб(а также мягкие булки), шоколад, чипсы и алкоголь.<br>
+                                Кормите лошадь небольшими порциями, положив кусочки корма на широко раскрытую ладонь:
+                                так она за пальцы не прихватит нечаянно, а удовольствие ее от лакомства дольше растянется.
+                            </div>
+                            <div class="care-block__more-info">
+                                Подробнее об уходе за лошадьми вы можете узнать здесь
+                            </div>
+                            <a class="care-block__btn btn" title="Переход на страницу об уходе за лошадьми" href="/carehorse">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="write">
+                <div class="write__container container">
+                    <div class="write__content">
+                        <div class="write__title">Появились вопросы? Заполните форму и мы ответим вам или позвоните на номер +7 (915) 355-86-26</div>
+                        <form class="question__form form" action="/home" method="POST">
+                            <input class = "question__name input_nbtn" placeholder="Имя" type="text" name = "username">
+                            <input class = "question__phone input_nbtn" placeholder="Номер телефона +7 (000) 000-00-00" type="tel" name = "phonenumber" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+                            <textarea class = "question__message input_nbtn" placeholder = "Сообщение" type="text" name = "question"></textarea>
+                            <input class="question__button input_btn" type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+{% endblock %}

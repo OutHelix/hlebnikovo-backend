@@ -1,0 +1,15 @@
+{% include 'layouts/header.html' %}
+{% block content %}
+        <main class="page">
+            <div class="page__certificates">
+                <div class="nopage__container container">
+                    <div class="nopage">
+                        <div class="nopage__main-title title">{% block title %}{% endblock %}</div>
+                        <div class="nopage__title title">Извините </br> На данный момент это страница в разработке</div>
+                        <a class="nopage__back-link" href="/home">Нажмите чтобы вернуться на главную страницу</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+{% endblock %}
+{% include 'layouts/footer.html' %}

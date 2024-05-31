@@ -1,0 +1,89 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Цены{% endblock %}
+
+{% block content %}
+<main class="page">
+            <div class="price-page__container container">
+                <div class="price-page__title title">Цены</div>
+                <div class="price-page__content">
+                    <div class="price-content__sub-choose">
+                        <div class="sub-choose__title">Выберете лошадь</div>
+                        <div>
+                            <select class = "sub-choose__select" id ="namehorse" name = "namehorse">
+                                <option disabled>Выберете лошадь</option>
+                                <option value="Мальчик">Мальчик</option>
+                                <option value="Стрелка">Стрелка</option>
+                                <option value="Кортик">Кортик</option>
+                                <option value="Женя">Женя</option>
+                                <option value="Флибустьер">Флибустьер</option>
+                                <option value="ЛаВинчи">Ла-Винчи</option>
+                                <option value="Пепел">Пепел</option>
+                                <option value="Темза">Темза</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="price-content__choose">
+                        <table class="content__choose">
+                            <thead class="choose-table__date">
+                                {% for i in range(11) %}
+                                <td class="chooseblock__date chooseblock">{{dates[i]}}</td>
+                                {% endfor %}
+                            </thead>
+                            <tbody>
+                                {% for j in range(10) %}
+                                <tr class="choose__tb">
+                                    {% for i in range(11) %}
+                                        <td class="chooseblock chooseblock__{{i}}{{number[j][i]}}" onclick="selectDateTime('{{dates[i]}}', '{{times[j]}}')">{{times[j]}}</td>
+                                    {% endfor %}
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="price-info__blocks">
+                        <div class="price__sales">
+                            <div class="sales__text">
+                                <a href="/price/sales">Тут вы можете посмотреть акции </br> которые действуют в настоящее время</a>
+                            </div>
+                        </div>
+                        <div class="price__certificates">
+                            <a certificates__text href="/price/certificates">У нас есть сертификаты для студентов,</br> для двоих и тд</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose-form__container">
+                    <form class = "form__choose" action = "/price/" method="POST">
+                        <div class="form-choose__header">
+                            <div class="form-choose__title">Форма заполнения</div>
+                            <div class="form-choose__close"><img src="../static/pictures/bx-x.svg" alt="Закрытие"></div>
+                        </div>
+                        <div class="form-choose__dnt">
+                            <div id="selectedDateTime">
+                                Выбранное время:
+                            </div>
+                            <input type="hidden" name="selected_date" id="selected_date">
+                            <input type="hidden" name="selected_time" id="selected_time">
+                        </div>
+                        <div class="form-choose__info">
+                            <div class="choose-info__name choose-info">
+                                <label class="label" for="name">Введите ФИО</label>
+                                <input class="input_nbtn" placeholder="Иванов Иван Иванович" type="text" name="fullname">
+                            </div>
+                            <div class="choose-info__phone choose-info">
+                                <label class="label" for="phone">Введите норер телефона</label>
+                                <input class="input_nbtn" placeholder="+7(xxx)-xxx-xx-xx" type="tel" name="phone" oninput="formatPhoneNumber(this)">
+                            </div>
+                            <div class="choose-info__numofpeople choose-info">
+                                <label class="label" for="numofpeople">Введите количество человек</label>
+                                <input class="input_nbtn" placeholder="От 1 до 2" type="number" name="numofpeople" min="1" max="2">
+                            </div>
+                            <div>
+                                <input class="input_btn" type="submit" value="Отправить">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+{% endblock %}
